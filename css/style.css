@@ -1,0 +1,162 @@
+:root{
+    --green: #008148;
+    --dark-greeen: #034732;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    height: 350px;
+    background-image: url(../img/header.png);
+    background-position: center;
+    background-size: cover;
+    filter: blur(5px);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--dark-greeen);
+    color: white;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        gap: 1.5rem;
+        a {
+            color: rgb(255 255 255 / 80%);
+            text-decoration: none;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+    &.closed {
+        max-height: 64px;
+        overflow: hidden;
+    }
+}
+
+main {
+    padding: 1rem 0.5rem;
+    margin-inline: auto;
+    width: 95%;
+    max-width: 1200px;
+    background-color: rgb(from var(--green) +40 g b /0.2);
+}
+
+p{
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+article {
+    margin-block: 1rem;
+}
+
+h1{
+    margin: auto;
+    margin-bottom: 1rem;
+    text-decoration: var(--green) wavy underline;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    font-variant: small-caps;
+    font-size: 1.8rem;
+}
+
+h3 {
+    margin-bottom: 0.3rem;
+}
+
+h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.big-img {
+    width: 90%;
+    max-width: 800px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+}
+
+#new-player > div {
+    display: grid;
+}
+
+.grid{
+    display: grid;
+    gap: 1rem;
+    img{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    nav, nav ul {
+        flex-direction: row;
+    }
+    nav img {
+        display: none;
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .new-player > div{
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 385px;
+        margin-block: auto;
+    }
+}
+
+.result, .result img {
+    border-radius: 0.5rem;
+}
+
+form {
+    width: 90%;
+    max-width: 18rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+input, button {
+    padding: 0.2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: var(--dark-green);
+    color: white;
+    padding: 1rem;
+    p {
+        text-align: center;
+        margin: 0;
+    }
+}

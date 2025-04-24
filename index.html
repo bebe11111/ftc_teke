@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FTC teke szakosztály</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -13,12 +14,68 @@
         
     </header>
 
-    <main>
+    <nav class="closed">
+        <div>
+            <span>BB</span>
+            <img src="img/hamburger.svg" alt="Menü" id="nav-toggle">
+        </div>
+        <ul>
+            <li><a href="#origin">Eredet</a></li>
+            <li><a href="#players">Játékosok</a></li>
+            <li><a href="#new-player">Új játékos</a></li>
+            <li><a href="#">Eredmények</a></li>
+            <li><a href="https://www.fradi.hu/teke/teke/tortenelem" target="_blank">Forrás</a></li>        </ul>
+    </nav>
 
+    <main>
+        <h1>Ftc teke szakosztály</h1>
+        <article id="intro">
+            <p>A Ferencvárosi Torna Club férfi tekeszakosztálya Budapest első számú tekecsapata, amely az NB I. Keleti csoportjában szerepel.</p>
+            <p>1948-as alapítása óta 57 alkalommal avatták magyar bajnokká, 1 alkalommal nyerték meg a világkupát, illetve 4 alkalommal nyerték meg az Európa Kupát.</p>
+        </article>
+        <article id="origin">
+            <h2>Eredet</h2>
+            <img src="img/elso_csapat.png" alt="Elso csapat" class="big-img">
+            <p>Az FTC (Ferencvárosi Torna Club) férfi tekeszakosztálya 1948-ban alakult. Jelenleg az elnöke Mátraházi István.
+
+                Az új szakosztály nem a nulláról indult, a budapesti BSzKRT SE szakosztályát vették át, és azonnal neveztek is a magyar csapatbajnoki küzdelmekbe, a Szuperligába. Első bajnoki mérkőzésüket megnyerték a MÁVAG ellen, majd a bajnokságban 30 mérkőzésből 18-at megnyerve, 1 döntetlen mellett, 11 vereséget szenvedve a negyedik helyen végeztek.</p>
+            <p>Az FTC mérkőzéseit a ferencvárosi Elek Gyula Arénában található "Csányi sétány 77." pályán játssza.
+
+                A pálya 2002-ben épült az Elek Gyula Aréna alagsorában, így közel van sok sportlétesítmény is. A pálya 2019-ben felújításon esett át, mivel nem felelt meg a nemzetközi szövetség feltételeinek.</p>
+        </article>
+        <article id="players">
+            <h2>jelenlegi játékosok</h2>
+            <div class="grid">
+                <div class="card">
+                    <h5>asd</h5>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </article>
+        <article id="new-player">
+            <h2>jatekos hozzaadas</h2>
+            <div>
+                <form>
+                    <label for="name">Neve</label>
+                    <input type="text" name="name" id="name" required>
+
+                    <label for="age">Életkorod</label>
+                    <input type="number" name="age" id="age" min="1" required>
+
+                    <input type="submit" value="Elküldés">
+                </form>
+                <div class="result hidden" style="width: 18rem;">
+                    <img src="" alt="" style="width: 100%;">
+                    <div class="result-body">
+    
+                    </div>
+                </div>
+            </div>
+        </article>
     </main>
 
     <footer>
-
+        <p>Készítette: Bor Bence</p>
     </footer>
 
 </body>
