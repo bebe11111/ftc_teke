@@ -15,7 +15,8 @@ for(const player of players)
 
     const table = document.createElement("table")
     const tr = document.createElement("tr")
-    const td = document.createElement("td")
+    const td1 = document.createElement("td")
+    const td2 = document.createElement("td")
 
     card.classList.add('card')
 
@@ -26,8 +27,8 @@ for(const player of players)
 
     best.textContent = "Legjobb eredmény: " +  player.best
 
-    
-    tr.append(td)
+
+    tr.append(td1, td2)
     table.append(tr)
     card.append(image, h5, best, table)
     div.append(card)
