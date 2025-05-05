@@ -1,3 +1,5 @@
+"use strict"
+
 const players = [
     {
         name: 'Bodó Bettina',

@@ -1,3 +1,5 @@
+"use strict"
+
 import{
     name,
     best,
