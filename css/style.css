@@ -88,7 +88,8 @@ h3 {
 }
 
 h5 {
-    margin-bottom: 0.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
     font-size: 1.2rem;
     text-align: center;
 }
@@ -127,6 +128,37 @@ h5 {
         margin-inline: auto;
     }
 }
+
+.card{
+  max-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 2rem;
+
+  a:hover {
+    background-color: white;
+    color: #031926;
+    border: 0.1rem solid #031926;
+  }
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card .text {
+    padding: 16px;
+    font-size: 18px;
+    color: #333;
+    flex-grow: 1;
+  }
 
 .result, .result img {
     border-radius: 0.5rem;
