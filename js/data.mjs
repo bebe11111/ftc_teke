@@ -171,8 +171,5 @@ const players = [
 ]
 
 export {
-    name,
-    best,
-    gender,
-    img
+    players
 }

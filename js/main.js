@@ -1,16 +1,12 @@
 "use strict"
 
 import{
-    name,
-    best,
-    gender,
-    tittle,
-    img
-}   from './data';
+    players
+}   from './data.mjs';
 
 const div = document.querySelector('#cards')
 
-for(const player in players)
+for(const player of players)
 {
     const card = document.createElement("div")
     const h5 = document.createElement("h5")
@@ -21,8 +17,8 @@ for(const player in players)
     h5.textContent = player.name
 
     image.src = player.img
-    image.alt = img.tittle = player.name
+    image.alt = image.tittle = player.name
 
-    card.append("h5", "image")
-    div.append("card")
+    card.append(h5, image)
+    div.append(card)
 }
