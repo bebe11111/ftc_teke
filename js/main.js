@@ -60,12 +60,13 @@ generatecard();
 function generateDelButton(idx) {
     const button = document.createElement('button');
     button.textContent = "Törlés"
-    button.classList.add('bg-red-500', 'p-2', 'rounded', 'cursor-pointer',);
+    button.classList.add('bg-red-500','p-2', 'rounded', 'cursor-pointer',);
     button.addEventListener('click', () => {
         deletePlayer = idx;
         const items = [];
         for (const key in players[idx]) {
             const li = document.createElement('li')
+            li.classList.add('border', 'border-green-800', 'rounded','m-3', 'min-h-[2rem]')
             li.textContent = players[idx][key];
             items.push(li);
         }
