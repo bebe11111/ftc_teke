@@ -16,6 +16,7 @@ const deleteDialog = document.querySelector('#delete-dialog')
 
 function generateParagraph(text){
     const p = document.createElement('p')
+    p.classList.add('m-[0.1rem]', 'p-[0.1rem]')
     p.textContent = text
     return p
 }
@@ -27,12 +28,10 @@ function generatecard(){
     for(const [index, player] of players.entries())
         {
             const card = document.createElement("div")
-            const h5 = document.createElement("h5")
-            const best = document.createElement("p")
             const image = document.createElement("img")
             const grid = document.createElement('div')
             
-            grid.classList.add('grid','grid-cols-2',)
+            grid.classList.add('grid','grid-cols-2','m-5')
 
             grid.append(
                 generateParagraph(player.name),
@@ -59,7 +58,6 @@ generatecard();
 
 
 function generateDelButton(idx) {
-    const cell = document.createElement('td');
     const button = document.createElement('button');
     button.textContent = "Törlés"
     button.classList.add('bg-red-500', 'p-2', 'rounded', 'cursor-pointer',);
@@ -74,12 +72,10 @@ function generateDelButton(idx) {
         deleteDialog.querySelector('ul').replaceChildren(...items);
         deleteDialog.showModal();
     });
-    cell.append(button);
-    return cell
+    return button
 }
 
 function generateEditButton(idx) {
-    const cell = document.createElement('td');
     const button = document.createElement('button');
     button.textContent = "Edit"
     button.classList.add('bg-yellow-500', 'p-2', 'rounded', 'cursor-pointer');
@@ -90,8 +86,7 @@ function generateEditButton(idx) {
         }
         updateDialog.showModal();
     });
-    cell.append(button);
-    return cell
+    return button
 }
 
 document.querySelector('#create').addEventListener('submit', event =>{
