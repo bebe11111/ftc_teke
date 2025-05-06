@@ -80,4 +80,18 @@ document.querySelector('form').addEventListener('submit', event =>{
     event.preventDefault
 
     const name = document.querySelector('#name').value;
-})
+    const best = document.querySelector('#best').value;
+    const gender = document.querySelector('#gender').value;
+    const img = document.querySelector('#img').value;
+
+    players.push({
+        name,
+        best,
+        gender,
+        img,
+    });
+
+    generateTable();
+
+    event.target.reset();
+});
