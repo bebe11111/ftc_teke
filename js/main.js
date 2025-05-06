@@ -40,11 +40,14 @@ function generateCell(text, classes) {
     return cell;
 }
 
-function generateTable(){
-    const table = document.querySelector('table')
-
+function generateButton(){
     const button = document.createElement("button")
     button.textContent = "Törlés"
+    return button;
+}
+
+function generateTable(){
+    const table = document.querySelector('table')
 
     const rows = [];
 
@@ -55,7 +58,7 @@ function generateTable(){
 
         row1.append(
             generateCell(player.name),
-            generateCell().append(button)
+            generateCell().append(generateButton())
         )
         row2.append(
             generateCell("Legjobb eredmény: " +  player.best)
@@ -68,3 +71,13 @@ function generateTable(){
 }
 
 generateTable();
+
+const footer = document.querySelector('footer')
+
+footer.append(generateButton())
+
+document.querySelector('form').addEventListener('submit', event =>{
+    event.preventDefault
+
+    const name = document.querySelector('#name').value;
+})
