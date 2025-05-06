@@ -6,37 +6,65 @@ import{
 
 const div = document.querySelector('#cards')
 
-for(const player of players)
-{
-    const card = document.createElement("div")
-    const h5 = document.createElement("h5")
-    const best = document.createElement("p")
-    const image = document.createElement("img")
+function generatecard(){
+    const div = document.querySelector('#cards')
 
-    const table = document.createElement("table")
-    const tr1 = document.createElement("tr")
-    const tr2 = document.createElement("tr")
-    const td1 = document.createElement("td")
-    const td2 = document.createElement("td")
-    const td3 = document.createElement("td")
+    for(const player of players)
+        {
+            const card = document.createElement("div")
+            const h5 = document.createElement("h5")
+            const best = document.createElement("p")
+            const image = document.createElement("img")
+        
+            const table = document.createElement("table")
+        
+            card.classList.add('card')
+        
+            image.src = player.img
+            image.alt = image.tittle = player.name
+        
+            card.append(image, table)
+            div.append(card)
+
+            
+        }
+        
+}
+
+generatecard();
+
+function generateCell(text, classes) {
+    const cell = document.createElement('td');
+    cell.textContent = text;
+    cell.classList.add(...classes ?? '');
+    return cell;
+}
+
+function generateTable(){
+    const table = document.querySelector('table')
+
     const button = document.createElement("button")
-
-    card.classList.add('card')
-
-    image.src = player.img
-    image.alt = image.tittle = player.name
-
     button.textContent = "Törlés"
 
-    td1.textContent = h5.textContent = player.name
-    td2.rowSpan = 2
+    const rows = [];
 
-    td3.textContent =  best.textContent = "Legjobb eredmény: " +  player.best 
+    for (const player of players){
 
-    td2.append(button)
-    tr1.append(td1, td2)
-    tr2.append(td3)
-    table.append(tr1, tr2)
-    card.append(image, table)
-    div.append(card)
+        const row1 = document.createElement('tr')
+        const row2 = document.createElement('tr')
+
+        row1.append(
+            generateCell(player.name),
+            generateCell().append(button)
+        )
+        row2.append(
+            generateCell("Legjobb eredmény: " +  player.best)
+        )
+
+        rows.push(row1, row2);
+    }
+
+    table.replaceChildren(...rows);
 }
+
+generateTable();
