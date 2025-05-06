@@ -14,22 +14,29 @@ for(const player of players)
     const image = document.createElement("img")
 
     const table = document.createElement("table")
-    const tr = document.createElement("tr")
+    const tr1 = document.createElement("tr")
+    const tr2 = document.createElement("tr")
     const td1 = document.createElement("td")
     const td2 = document.createElement("td")
+    const td3 = document.createElement("td")
+    const button = document.createElement("button")
 
     card.classList.add('card')
-
-    h5.textContent = player.name
 
     image.src = player.img
     image.alt = image.tittle = player.name
 
-    best.textContent = "Legjobb eredmény: " +  player.best
+    button.textContent = "Törlés"
 
+    td1.textContent = h5.textContent = player.name
+    td2.rowSpan = 2
 
-    tr.append(td1, td2)
-    table.append(tr)
-    card.append(image, h5, best, table)
+    td3.textContent =  best.textContent = "Legjobb eredmény: " +  player.best 
+
+    td2.append(button)
+    tr1.append(td1, td2)
+    tr2.append(td3)
+    table.append(tr1, tr2)
+    card.append(image, table)
     div.append(card)
 }
