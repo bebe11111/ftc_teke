@@ -6,26 +6,50 @@ import{
 
 const div = document.querySelector('#cards')
 
+let updatePlayer = -1;
+
+let deletePlayer = -1;
+
+const updateDialog = document.querySelector('#update-dialog')
+
+const deleteDialog = document.querySelector('#delete-dialog')
+
+function generateParagraph(text){
+    const p = document.createElement('p')
+    p.textContent = text
+    return p
+}
+
 function generatecard(){
     const div = document.querySelector('#cards')
+    div.replaceChildren()
 
-    for(const player of players)
+    for(const [index, player] of players.entries())
         {
             const card = document.createElement("div")
             const h5 = document.createElement("h5")
             const best = document.createElement("p")
             const image = document.createElement("img")
-        
-            const table = document.createElement("table")
+            const grid = document.createElement('div')
+            
+            grid.classList.add('grid','grid-cols-2',)
+
+            grid.append(
+                generateParagraph(player.name),
+                generateEditButton(index),
+                generateParagraph("Legjobb eredmény: " +  player.best),
+                generateDelButton(index),
+
+            )
         
             card.classList.add('card')
         
             image.src = player.img
             image.alt = image.tittle = player.name
         
-            card.append(image, table)
+            card.append(image, grid)
+            
             div.append(card)
-
             
         }
         
@@ -33,51 +57,45 @@ function generatecard(){
 
 generatecard();
 
-function generateCell(text, classes) {
+
+function generateDelButton(idx) {
     const cell = document.createElement('td');
-    cell.textContent = text;
-    cell.classList.add(...classes ?? '');
-    return cell;
-}
-
-function generateButton(){
-    const button = document.createElement("button")
+    const button = document.createElement('button');
     button.textContent = "Törlés"
-    return button;
+    button.classList.add('bg-red-500', 'p-2', 'rounded', 'cursor-pointer',);
+    button.addEventListener('click', () => {
+        deletePlayer = idx;
+        const items = [];
+        for (const key in players[idx]) {
+            const li = document.createElement('li')
+            li.textContent = players[idx][key];
+            items.push(li);
+        }
+        deleteDialog.querySelector('ul').replaceChildren(...items);
+        deleteDialog.showModal();
+    });
+    cell.append(button);
+    return cell
 }
 
-function generateTable(){
-    const table = document.querySelector('table')
-
-    const rows = [];
-
-    for (const player of players){
-
-        const row1 = document.createElement('tr')
-        const row2 = document.createElement('tr')
-
-        row1.append(
-            generateCell(player.name),
-            generateCell().append(generateButton())
-        )
-        row2.append(
-            generateCell("Legjobb eredmény: " +  player.best)
-        )
-
-        rows.push(row1, row2);
-    }
-
-    table.replaceChildren(...rows);
+function generateEditButton(idx) {
+    const cell = document.createElement('td');
+    const button = document.createElement('button');
+    button.textContent = "Edit"
+    button.classList.add('bg-yellow-500', 'p-2', 'rounded', 'cursor-pointer');
+    button.addEventListener('click', () => {
+        updatePlayer = idx;
+        for (const key in players[idx]) {
+            updateDialog.querySelector(`[name="${key}"]`).value = players [idx] [key];
+        }
+        updateDialog.showModal();
+    });
+    cell.append(button);
+    return cell
 }
 
-generateTable();
-
-const footer = document.querySelector('footer')
-
-footer.append(generateButton())
-
-document.querySelector('form').addEventListener('submit', event =>{
-    event.preventDefault
+document.querySelector('#create').addEventListener('submit', event =>{
+    event.preventDefault()
 
     const name = document.querySelector('#name').value;
     const best = document.querySelector('#best').value;
@@ -91,7 +109,50 @@ document.querySelector('form').addEventListener('submit', event =>{
         img,
     });
 
-    generateTable();
+    generatecard();
 
     event.target.reset();
+});
+
+document.querySelector('#update').addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = document.querySelector('#update-name').value;
+    const best = document.querySelector('#update-best').value;
+    const gender = document.querySelector('#update-gender').value;
+    const img = document.querySelector('#update-img').value;
+
+    players.splice(updatePlayer, 1, {
+        name,
+        best,
+        gender,
+        img,
+    })
+
+    generatecard();
+    updatePlayer = -1;
+    updateDialog.close();
+    event.target.reset();
+});
+
+document.querySelector('#close-update').addEventListener('click', () => {
+    updatePlayer = -1;
+    updateDialog.close();
+});
+
+document.querySelector('#delete').addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    players.splice(deletePlayer, 1)
+
+    generatecard();
+
+    deletePlayer = -1;
+
+    deleteDialog.close();
+})
+
+document.querySelector('#close-delete').addEventListener('click', () => {
+    updatePlayer = -1;
+    deleteDialog.close();
 });

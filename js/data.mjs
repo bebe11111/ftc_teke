@@ -5,7 +5,6 @@ const players = [
         name: 'Bodó Bettina',
         best: '',
         gender: 'nő',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/6/nr/hh647.jpg',
     },
 
@@ -20,7 +19,6 @@ const players = [
         name: 'Fábián Adelin',
         best: '',
         gender: 'nő',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/u/01/1vbia.jpg',
     },
 
@@ -28,7 +26,6 @@ const players = [
         name: 'Heimann Ibolya',
         best: '',
         gender: 'nő',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/9/r8/9xmb6.jpg',
     },
 
@@ -36,7 +33,6 @@ const players = [
         name: 'Mátraháziné Kiss Julianna',
         best: '',
         gender: 'nő',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/z/xu/z93g6.jpg',
     },
 
@@ -44,7 +40,6 @@ const players = [
         name: 'Nagy Beatrix',
         best: '',
         gender: 'nő',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/g/hg/v8b2f.jpg',
     },
 
@@ -52,7 +47,6 @@ const players = [
         name: 'Pintér Barbara',
         best: '',
         gender: 'nő',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/f/w9/0xdu5.jpg',
     },
 
@@ -60,7 +54,6 @@ const players = [
         name: 'Sinka Cintia Gréta',
         best: '',
         gender: 'nő',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/e/58/2rcqs.jpg',
     },
 
@@ -68,7 +61,6 @@ const players = [
         name: 'Szabó Mónika',
         best: '',
         gender: 'nő',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/j/70/vdz7y.jpg',
     },
 
@@ -76,7 +68,6 @@ const players = [
         name: 'Tóth Andrea',
         best: '',
         gender: 'nő',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/2/sx/qf36f.jpg',
     },
 
@@ -84,7 +75,6 @@ const players = [
         name: 'Bánhegyi János',
         best: '',
         gender: 'férfi',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/j/8p/603s1.jpg',
     },
 
@@ -92,7 +82,6 @@ const players = [
         name: 'Bor Bence',
         best: '',
         gender: 'férfi',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/a/hz/ycuww.jpg',
     },
 
@@ -100,7 +89,6 @@ const players = [
         name: 'Deák Dániel',
         best: '',
         gender: 'férfi',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/3/mq/e3x98.jpg',
     },
 
@@ -108,7 +96,6 @@ const players = [
         name: 'Hajas Gábor',
         best: '',
         gender: 'férfi',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/y/5b/qs3ht.jpg',
     },
 
@@ -116,7 +103,6 @@ const players = [
         name: 'Horváth Balázs',
         best: '',
         gender: 'férfi',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/h/hz/4l419.jpg',
     },
 
@@ -124,7 +110,6 @@ const players = [
         name: 'Márkus László',
         best: '',
         gender: 'férfi',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/s/dl/nuppo.jpg',
     },
 
@@ -132,7 +117,6 @@ const players = [
         name: 'Sidó László Kálmán',
         best: '',
         gender: 'férfi',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/9/f3/c65q0.jpg',
     },
 
@@ -140,7 +124,6 @@ const players = [
         name: 'Várvölgyi Milán',
         best: '',
         gender: 'férfi',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/t/gb/j7r1o.jpg',
     },
 
@@ -148,7 +131,6 @@ const players = [
         name: 'Vereckei Zsolt',
         best: '',
         gender: 'férfi',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/s/26/x01n1.jpg',
     },
 
@@ -156,7 +138,6 @@ const players = [
         name: 'Vígh István Attila',
         best: '',
         gender: 'férfi',
-        tittle: 'jétékos',
         img: 'https://www.fradi.hu/wm/upload/295x393/w/gh/z1jtd.jpg',
     },
 
@@ -164,7 +145,6 @@ const players = [
         name: 'Mátraházi István',
         best: '',
         gender: 'férfi',
-        tittle: 'szakosztályvezető',
         img: 'https://www.fradi.hu/wm/upload/295x393/a/cy/ms3ep.jpg',
     },
 
