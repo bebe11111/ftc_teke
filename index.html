@@ -53,30 +53,31 @@
             </div>
         </article>
         <article id="new-player">
+
+            <dialog class="w-4/5 max-w-[600px] p-2 border rounded shadow self-center-safe justify-self-center-safe" open>
+                <form>
+                    <label for="update-name">Név</label>
+                    <input type="text" name="update-name" id="update-name" required>
+
+                    <label for="update-best">Legjobb eredmény</label>
+                    <input type="number" name="update-best" id="update-best" min="0" max="750">
+
+                    <label for="update-gender">Nem</label>
+                    <select name="update-gender" id="update-gender" required>
+                        <option value=""></option>
+                        <option value="nő">Nő</option>
+                        <option value="férfi">Férfi</option>
+                    </select>
+
+                    <label for="update-img">Kép forrás:</label>
+                    <input type="text" name="update-img" id="update-img">
+
+                    <button type="submit">Elküldés</button>
+                </form>
+            </dialog>
+            
             <h2>jatekos hozzaadas</h2>
             <div>
-
-                <dialog class="w-4/5 max-w-[600px] p-2 border rounded shadow self-center-safe justify-self-center-safe" open>
-                    <form>
-                        <label for="update-name">Név</label>
-                        <input type="text" name="update-name" id="update-name" required>
-    
-                        <label for="update-best">Legjobb eredmény</label>
-                        <input type="number" name="update-best" id="update-best" min="0" max="750">
-    
-                        <label for="update-gender">Nem</label>
-                        <select name="update-gender" id="update-gender" required>
-                            <option value=""></option>
-                            <option value="nő">Nő</option>
-                            <option value="férfi">Férfi</option>
-                        </select>
-    
-                        <label for="update-img">Kép forrás:</label>
-                        <input type="text" name="update-img" id="update-img">
-    
-                        <button type="submit">Elküldés</button>
-                    </form>
-                </dialog>
 
                 <form>
                     <label for="name">Név</label>
