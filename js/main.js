@@ -16,7 +16,7 @@ const deleteDialog = document.querySelector('#delete-dialog')
 
 function generateParagraph(text){
     const p = document.createElement('p')
-    p.classList.add('m-[0.1rem]', 'p-[0.1rem]')
+    p.classList.add('flex','flex-col','justify-around',) //nincsen középen a szöveg
     p.textContent = text
     return p
 }
@@ -31,7 +31,7 @@ function generatecard(){
             const image = document.createElement("img")
             const grid = document.createElement('div')
             
-            grid.classList.add('grid','grid-cols-2','m-5')
+            grid.classList.add('grid','grid-cols-2','m-5','mx-auto','gap-1',)
 
             grid.append(
                 generateParagraph(player.name),
@@ -59,6 +59,7 @@ generatecard();
 
 function generateDelButton(idx) {
     const button = document.createElement('button');
+    const div = document.createElement('div')
     button.textContent = "Törlés"
     button.classList.add('bg-red-500','p-2', 'rounded', 'cursor-pointer',);
     button.addEventListener('click', () => {
@@ -73,11 +74,14 @@ function generateDelButton(idx) {
         deleteDialog.querySelector('ul').replaceChildren(...items);
         deleteDialog.showModal();
     });
-    return button
+    div.classList.add('p-2')
+    div.append(button)
+    return div
 }
 
 function generateEditButton(idx) {
     const button = document.createElement('button');
+    const div = document.createElement('div')
     button.textContent = "Edit"
     button.classList.add('bg-yellow-500', 'p-2', 'rounded', 'cursor-pointer');
     button.addEventListener('click', () => {
@@ -87,7 +91,9 @@ function generateEditButton(idx) {
         }
         updateDialog.showModal();
     });
-    return button
+    div.classList.add('p-2')
+    div.append(button)
+    return div
 }
 
 document.querySelector('#create').addEventListener('submit', event =>{
