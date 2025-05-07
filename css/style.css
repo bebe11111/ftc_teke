@@ -118,7 +118,8 @@ h4{
 .grid-div{
     display: grid;
     gap: 1rem;
-    /*grid: auto-flow dense 1fr 1fr 1fr;  utolsó card középre */
+    /*grid: auto-flow dense 1fr 1fr 1fr;  utolsó card középre 
+    justify-items: center;*/
 
     h5{
         text-align: center;
