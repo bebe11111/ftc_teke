@@ -82,6 +82,8 @@ h1{
     margin: auto;
     margin-bottom: 1rem;
     text-decoration: var(--green) wavy underline;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 h2 {
