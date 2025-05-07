@@ -1,6 +1,7 @@
 :root{
     --green: #008148;
-    --dark-greeen: #034732;
+    --dark-greeen: #1c7549;
+    --ftc-green : #1c7549;
 }
 
 * {
@@ -184,15 +185,18 @@ input, form > button {
     display: none;
 }
 
-footer {
-    background-color: var(--dark-green);
-    color: white;
-    padding: 1rem;
-    p {
-        text-align: center;
-        margin: 0;
-    }
+footer{
+    text-align: center;
+    padding: 1.2rem;
+    background-color: var(--ftc-green);
+    font-size: 1.1rem;
 }
+
+/*footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--yellow);
+}*/
 
 #update-dialog{
     font-size: 1.2rem;
