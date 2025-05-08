@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>3 elem sorban, középre igazított utolsó sor</title>
+  <style>
+    .flex-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* sorok középre igazítása */
+      gap: 20px;
+    }
+
+    .item {
+      flex: 0 0 calc(33.333% - 20px); /* 3 elem egy sorban (mínusz gap) */
+      background-color: #ffcc00;
+      padding: 30px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    /* reszponzív: kisebb képernyőn kisebb oszlopszám */
+    @media (max-width: 768px) {
+      .item {
+        flex: 0 0 calc(50% - 20px); /* 2 oszlop */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .item {
+        flex: 0 0 100%; /* 1 oszlop */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-grid">
+    <div class="item">Elem 1</div>
+    <div class="item">Elem 2</div>
+    <div class="item">Elem 2</div>
+    <div class="item">Elem 2</div>
+    <!-- <div class="item">Elem 3</div> -->
+    <!-- <div class="item">Elem 4</div> -->
+  </div>
+
+</body>
+</html>
