@@ -16,37 +16,76 @@ const deleteDialog = document.querySelector('#delete-dialog')
 
 function generateParagraph(text){
     const p = document.createElement('p')
-    p.classList.add('flex','flex-col','justify-around','text-black') //nincsen középen a szöveg
+    p.classList.add('flex','flex-col','justify-center-safe',) //nincsen középen a szöveg
     p.textContent = text
     return p
 }
 
 function generatecard(){
-    const div = document.querySelector('#cards')
+    const div = document.querySelector('#cards');
+    const u15wmn = document.createElement('div');
+    const u19wmn = document.createElement('div');
+    const u15mn = document.createElement('div');
+    const u19mn = document.createElement('div');
+    const captain = document.createElement('div');
+
+    const u15wmnh4 = document.createElement('h4');
+    const u19wmnh4 = document.createElement('h4');
+    const u15mnh4 = document.createElement('h4');
+    const u19mnh4 = document.createElement('h4');
+    const captainh4 = document.createElement('h4');
+
+    u15wmnh4.textContent = 'U15 LÁNYOK';
+    u19wmnh4.textContent = 'U19 LÁNYOK';
+    u15mnh4.textContent = 'U15 FIÚK';
+    u19mnh4.textContent = 'U19 FIÚK';
+    captainh4.textContent ='SZÖVETSÉGI KAPITÁNYOK';
+
+
     div.replaceChildren()
 
     for(const [index, player] of players.entries())
         {
             const card = document.createElement("div")
             const image = document.createElement("img")
-            const grid = document.createElement('div')
+            const flex = document.createElement('div')
             
-            grid.classList.add('grid','grid-cols-2','m-5','mx-auto','gap-1',)
+            flex.classList.add('flex','flex-wrap','m-5','mx-auto','gap-1','justify-evenly',)
 
-            grid.append(
+            flex.append(
                 generateParagraph(player.name),
                 generateEditButton(index),
                 generateParagraph("Legjobb eredmény: " +  player.best),
                 generateDelButton(index),
+                generateParagraph(player.team)
 
             )
         
-            card.classList.add('card')
+            card.classList.add('card','text-black')
         
             image.src = player.img
             image.alt = image.tittle = player.name
         
-            card.append(image, grid)
+            card.append(image, flex)
+
+            if (player.type == 'u15' && player.gender == 'Nő') {
+                u15wmn.append(card)
+            }
+            else if (player.type == 'u19' && player.gender == 'Nő')
+            {
+
+            }
+            else if (player.type == 'u19' && player.gender == 'Nő')
+            {
+
+            }
+            else if (player.type == 'u19' && player.gender == 'Nő')
+            {
+
+            }
+            else{}
+
+            div.append(u15wmn,u19wmn, u15mn, u19mn, captain)
             
             div.append(card)
             

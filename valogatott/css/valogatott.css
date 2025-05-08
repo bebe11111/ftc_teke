@@ -214,6 +214,11 @@ footer{
 }
 
 @media screen and (min-width: 600px) {
+    nav{
+        &.closed {
+        max-height: 100px;
+    }
+    }
     nav, nav ul {
         flex-direction: row;
     }
