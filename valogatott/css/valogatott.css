@@ -151,7 +151,6 @@ h4{
 
 .card{
   max-width: 350px;
-  max-height: 600px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

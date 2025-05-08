@@ -79,8 +79,13 @@ function generatecard(){
             )
         
             card.classList.add('card','text-black',)
-        
-            image.src = player.img
+            image.classList.add('max-h-[460px]','object-contain','overflow-hidden','object-cover')
+
+            if (player.img == '') {
+                image.src = 'img/anonymus.webp'
+            }
+            else image.src = player.img
+            
             image.alt = image.tittle = player.name
         
             card.append(image, flex)
