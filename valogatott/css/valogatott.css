@@ -1,0 +1,275 @@
+:root{
+    --dark-grey: #141414;
+    --dark-greeen: radial-gradient(rgb(0, 36, 0), black);
+    --ftc-green : radial-gradient(rgb(0, 60, 0), black);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    height: 350px;
+    background-image: url(../img/bokeret.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(5px);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--dark-grey);
+    color: white;
+    position: sticky;
+    top: 0px;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        gap: 1.5rem;
+        a {
+            color: rgb(255 255 255 / 80%);
+            text-decoration: none;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+    &.closed {
+        max-height: 64px;
+        overflow: hidden;
+    }
+}
+
+main {
+    padding: 1rem 0.5rem;
+    margin-inline: auto;
+    width: 95%;
+    max-width: 1200px;
+    background-color: var(--ftc-green);
+
+    p{
+        text-indent: 1.8rem;
+        text-align: justify;
+        line-height: 1.7;
+        margin-bottom: 0.3rem;
+    }
+
+}
+
+article {
+    margin-block: 1rem;
+    margin-inline: auto;
+}
+
+h1{
+    margin: auto;
+    margin-bottom: 1rem;
+    text-decoration: var(--green) wavy underline;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    font-variant: small-caps;
+    font-size: 1.8rem;
+}
+
+h3 {
+    margin-bottom: 0.3rem;
+}
+
+h4{
+    margin: 0.5rem;
+    text-indent: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.big-img {
+    width: 90%;
+    max-width: 800px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+}
+
+#new-player > div {
+    display: grid;
+}
+
+.flex-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    h5{
+        text-align: center;
+
+        &::after{
+            content: "";
+        }
+    }
+    p{
+        text-align: center;
+    }
+
+    img{
+        width: 80%;
+        margin: auto;
+        display: block;
+        margin-inline: auto;
+    }
+}
+
+.card{
+  max-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 2rem;
+  margin-inline: auto;
+
+  a:hover {
+    background-color: white;
+    color: #031926;
+    border: 0.1rem solid #031926;
+  }
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card .text {
+    padding: 16px;
+    font-size: 18px;
+    color: #333;
+    flex-grow: 1;
+  }
+
+.result, .result img {
+    border-radius: 0.5rem;
+}
+
+form {
+    width: 90%;
+    max-width: 18rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+input, form > button {
+    padding: 0.4rem;
+}
+
+.hidden {
+    display: none;
+}
+
+footer{
+    text-align: center;
+    padding: 1.2rem;
+    background-color: var(--ftc-green);
+    font-size: 1.1rem;
+}
+
+#update-dialog{
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+    nav, nav ul {
+        flex-direction: row;
+    }
+    nav img {
+        display: none;
+    }
+    .flex-div{
+        flex: 0 0 calc(50% - 1rem); /* 2 elem egy sorban (mínusz gap) */
+    }
+    #update-dialog{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    nav, nav ul {
+        flex-direction: row;
+    }
+    nav img {
+        display: none;
+    }
+    .flex-div{
+        flex: 0 0 calc(33.333% - 1rem); /* 3 elem egy sorban (mínusz gap) */    
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main{
+        max-width: 1600px;
+    }
+    p{
+        font-size: large;
+    }
+    nav, nav ul {
+        flex-direction: row;
+    }
+    nav img {
+        display: none;
+    }
+    .flex-div{
+        flex: 0 0 calc(25% - 1rem); /* 4 elem egy sorban (mínusz gap) */    
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    main{
+        max-width: 2100px;
+    }
+    p{
+        font-size: larger;
+    }
+    nav, nav ul {
+        flex-direction: row;
+    }
+    nav img {
+        display: none;
+    }
+    .flex-div{
+        flex: 0 0 calc(20% - 1rem); /* 4 elem egy sorban (mínusz gap) */    
+    }
+}
+
+/* lehet e medi scrennel szabályozni a flexet?
+    vagy jobb ha a flex magának szabályozza?
+    honnan kéne levenni a dsiplay block-ot?
+    github mi ez a compare & pull request?
+*/
