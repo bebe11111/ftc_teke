@@ -16,7 +16,7 @@ const deleteDialog = document.querySelector('#delete-dialog')
 
 function generateParagraph(text){
     const p = document.createElement('p')
-    p.classList.add('flex','flex-col','justify-center-safe',) //nincsen középen a szöveg
+    p.classList.add('flex','flex-col','justify-around',) //nincsen középen a szöveg
     p.textContent = text
     return p
 }
@@ -41,8 +41,25 @@ function generatecard(){
     u19mnh4.textContent = 'U19 FIÚK';
     captainh4.textContent ='SZÖVETSÉGI KAPITÁNYOK';
 
+    u15wmn.classList.add('flex-div',)
+    u19wmn.classList.add('flex-div',)
+    u15mn.classList.add('flex-div',)
+    u19mn.classList.add('flex-div',)
+    captain.classList.add('flex-div',)
+
+    u15wmn.append(u15wmnh4)
+    u19wmn.append(u19wmnh4)
+    u15mn.append(u15mnh4)
+    u19mn.append(u19mnh4)
+    captain.append(captainh4)
+
 
     div.replaceChildren()
+    u15wmn.replaceChildren()
+    u19wmn.replaceChildren()
+    u15mn.replaceChildren()
+    u19wmn.replaceChildren()
+    captain.replaceChildren()
 
     for(const [index, player] of players.entries())
         {
@@ -73,23 +90,21 @@ function generatecard(){
             }
             else if (player.type == 'u19' && player.gender == 'Nő')
             {
-
+                u19wmn.append(card)
             }
             else if (player.type == 'u19' && player.gender == 'Nő')
             {
-
+                u15mn.append(card)
             }
             else if (player.type == 'u19' && player.gender == 'Nő')
             {
-
+                u19wmn.append(card)
             }
-            else{}
-
-            div.append(u15wmn,u19wmn, u15mn, u19mn, captain)
-            
-            div.append(card)
+            else{captain.append(card)}
             
         }
+
+    div.append(u15wmn,u19wmn, u15mn, u19mn, captain)
         
 }
 
