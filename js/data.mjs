@@ -73,7 +73,7 @@ const players = [
 
     {
         name: 'Bánhegyi János',
-        best: '598',
+        best: '599',
         gender: 'férfi',
         img: 'https://www.fradi.hu/wm/upload/295x393/j/8p/603s1.jpg',
     },
@@ -108,7 +108,7 @@ const players = [
 
     {
         name: 'Márkus László',
-        best: '603',
+        best: '633',
         gender: 'férfi',
         img: 'https://www.fradi.hu/wm/upload/295x393/s/dl/nuppo.jpg',
     },
