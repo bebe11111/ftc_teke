@@ -16,7 +16,7 @@ const deleteDialog = document.querySelector('#delete-dialog')
 
 function generateParagraph(text){
     const p = document.createElement('p')
-    p.classList.add('flex','flex-col','justify-around',) //nincsen középen a szöveg
+    p.classList.add('flex','flex-col','justify-around','text-black') //nincsen középen a szöveg
     p.textContent = text
     return p
 }

@@ -2,150 +2,173 @@
 
 const players = [
     {
-        name: 'Bodó Bettina',
-        best: '557',
+        name: 'Bíró Annamária',
+        team: 'Ipartechnika Győr SE',
         gender: 'nő',
+        type: 'u15',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/6/nr/hh647.jpg',
     },
 
     {
-        name: 'Bognár Barbara',
-        best: '559',
+        name: 'Korcsmáros Zoé',
+        team: 'ZTE-ZÁÉV TK',
         gender: 'nő',
+        type: 'u15',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/z/a4/0li6u.jpg',
     },
 
     {
-        name: 'Fábián Adelin',
-        best: '609',
+        name: 'Bognár Barbara',
+        team: 'Ferencvárosi TC',
         gender: 'nő',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/u/01/1vbia.jpg',
     },
 
     {
-        name: 'Heimann Ibolya',
-        best: '598',
+        name: 'Bodó Bettina',
+        team: 'Ferencvárosi TC',
         gender: 'nő',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/9/r8/9xmb6.jpg',
     },
 
     {
-        name: 'Mátraháziné Kiss Julianna',
-        best: '565',
+        name: 'Fábián Adelin',
+        team: 'Ferencvárosi TC',
         gender: 'nő',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/z/xu/z93g6.jpg',
     },
 
     {
-        name: 'Nagy Beatrix',
-        best: '607',
+        name: 'Danóczy Kinga',
+        team: 'Rákoshegyi VSE',
         gender: 'nő',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/g/hg/v8b2f.jpg',
     },
 
     {
-        name: 'Pintér Barbara',
-        best: '606',
+        name: 'Szabó Boglárka',
+        team: 'Ipartechnika Győr SE',
         gender: 'nő',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/f/w9/0xdu5.jpg',
     },
 
     {
-        name: 'Sinka Cintia Gréta',
-        best: '594',
+        name: 'Müller Barbara',
+        team: 'Pápai Vasas TK',
         gender: 'nő',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/e/58/2rcqs.jpg',
     },
 
     {
-        name: 'Szabó Mónika',
-        best: '592',
+        name: 'Kiss Bence',
+        team: '592',
         gender: 'nő',
+        best: '592',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/j/70/vdz7y.jpg',
     },
 
     {
-        name: 'Tóth Andrea',
-        best: '603',
+        name: 'Orbán Levente',
+        team: '603',
         gender: 'nő',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/2/sx/qf36f.jpg',
     },
 
     {
-        name: 'Bánhegyi János',
-        best: '598',
+        name: 'Hegedűs Dominik',
+        team: '598',
         gender: 'férfi',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/j/8p/603s1.jpg',
     },
 
     {
-        name: 'Bor Bence',
-        best: '580',
+        name: 'Pis Zsombor',
+        team: 'Oroszlányi SZE',
         gender: 'férfi',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/a/hz/ycuww.jpg',
     },
 
     {
-        name: 'Deák Dániel',
-        best: '618',
+        name: 'Reibling Olivér',
+        team: 'Szentgotthárdi VSE',
         gender: 'férfi',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/3/mq/e3x98.jpg',
     },
 
     {
-        name: 'Hajas Gábor',
-        best: '596',
+        name: 'Sziklási Szabolcs',
+        team: 'Köfém SC',
         gender: 'férfi',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/y/5b/qs3ht.jpg',
     },
 
     {
-        name: 'Horváth Balázs',
-        best: '592',
+        name: 'Várvögyi Milán',
+        team: 'Ferencvárosi TC',
         gender: 'férfi',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/h/hz/4l419.jpg',
     },
 
     {
-        name: 'Márkus László',
-        best: '603',
+        name: 'Mazzag Dávid',
+        team: 'Zalaegerszegi TK',
         gender: 'férfi',
+        type: 'u19',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/s/dl/nuppo.jpg',
     },
 
     {
-        name: 'Sidó László Kálmán',
-        best: '635',
-        gender: 'férfi',
+        name: 'Harcos Ágnes',
+        team: 'hun',
+        gender: 'Nő',
+        type: 'hun',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/9/f3/c65q0.jpg',
     },
 
     {
-        name: 'Várvölgyi Milán',
-        best: '625',
+        name: 'Farkas Imre',
+        team: 'hun',
         gender: 'férfi',
+        type: 'hun',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/t/gb/j7r1o.jpg',
     },
 
     {
-        name: 'Vereckei Zsolt',
-        best: '563',
+        name: 'Tróbert József',
+        team: 'hun',
         gender: 'férfi',
+        type: 'hun',
+        best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/s/26/x01n1.jpg',
-    },
-
-    {
-        name: 'Vígh István Attila',
-        best: '573',
-        gender: 'férfi',
-        img: 'https://www.fradi.hu/wm/upload/295x393/w/gh/z1jtd.jpg',
-    },
-
-    {
-        name: 'Mátraházi István',
-        best: '554',
-        gender: 'férfi',
-        img: 'https://www.fradi.hu/wm/upload/295x393/a/cy/ms3ep.jpg',
     },
 
 ]
