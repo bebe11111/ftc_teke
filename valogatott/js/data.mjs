@@ -6,7 +6,7 @@ const players = [
         team: 'Ipartechnika Győr SE',
         gender: 'nő',
         type: 'u15',
-        best: '592',
+        best: '520',
         img: 'https://jakiskola.hu/wp-content/uploads/2023/09/Annamari-768x1024.jpg',
     },
 
@@ -15,7 +15,7 @@ const players = [
         team: 'ZTE-ZÁÉV TK',
         gender: 'nő',
         type: 'u15',
-        best: '592',
+        best: '554',
         img: 'https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-6/494308029_122166285896546857_29413513973211694_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=tGCq8T4d9bcQ7kNvwFNvEDB&_nc_oc=Adn38oZuHWsKCe-Re0Yt7y7rbpeBzx0bQRXhNqpW9E6eCP_duzAumtoOlf7noOcKQnOg6Hjs1faSCZ4Bsg2RZ8hI&_nc_zt=23&_nc_ht=scontent.fbud7-4.fna&_nc_gid=_1u6Wb5v0E8jsGdYSIoD4A&oh=00_AfIcO3oaTkXg2Zp7Doesc0OjSadVnUnXmrwQgbbwdCpLBg&oe=6822F466',
     },
 
@@ -24,7 +24,7 @@ const players = [
         team: 'Ferencvárosi TC',
         gender: 'nő',
         type: 'u19',
-        best: '592',
+        best: '559',
         img: 'https://www.fradi.hu/wm/upload/295x393/z/a4/0li6u.jpg',
     },
 
@@ -33,7 +33,7 @@ const players = [
         team: 'Ferencvárosi TC',
         gender: 'nő',
         type: 'u19',
-        best: '592',
+        best: '557',
         img: 'https://www.fradi.hu/wm/upload/295x393/6/nr/hh647.jpg',
     },
 
@@ -42,7 +42,7 @@ const players = [
         team: 'Ferencvárosi TC',
         gender: 'nő',
         type: 'u19',
-        best: '592',
+        best: '609',
         img: 'https://www.fradi.hu/wm/upload/295x393/u/01/1vbia.jpg',
     },
 
@@ -51,7 +51,7 @@ const players = [
         team: 'Rákoshegyi VSE',
         gender: 'nő',
         type: 'u19',
-        best: '592',
+        best: '559',
         img: 'https://feltoltes.csaka9.hu/uploads/Danoczy_Kinga.jpeg',
     },
 
@@ -60,7 +60,7 @@ const players = [
         team: 'Ipartechnika Győr SE',
         gender: 'nő',
         type: 'u19',
-        best: '592',
+        best: '582',
         img: 'https://feltoltes.csaka9.hu/uploads/IMG_20230912_145950.jpg',
     },
 
@@ -69,7 +69,7 @@ const players = [
         team: 'Pápai Vasas TK',
         gender: 'nő',
         type: 'u19',
-        best: '592',
+        best: '549',
         img: 'https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-6/489960721_122226953984020039_7428192294536384482_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Ll2fKTRMDu0Q7kNvwFMSTqp&_nc_oc=Adm8YRzYN4Elil93IKSDtZ6fLffijUuu-5LCLAShnxvEgBdyD2MAooYqsdslxaR9FIuixCtcifMzaEbc95LSzij4&_nc_zt=23&_nc_ht=scontent.fbud7-4.fna&_nc_gid=emX1kWOgUFmUG6vBqdzcaA&oh=00_AfJQX_D9_Seb648qOesdyAOBLQBlUpszbEqT3yBwLQfubw&oe=6822F856',
     },
 
@@ -78,7 +78,7 @@ const players = [
         team: 'Répcelaki SE',
         gender: 'férfi',
         type: 'u15',
-        best: '592',
+        best: '576',
         img: 'https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-6/494125345_1259074262888339_99874194833710415_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=WreRuhhXzLUQ7kNvwG-ra41&_nc_oc=AdkOM0CVyH732opZvOUl0f-W6mrjmvi6fFytO-gPLbP1OdA_tnp5mrJRxi1tuLZmMTMRGUS7ptFL5F_QcNBc486v&_nc_zt=23&_nc_ht=scontent.fbud7-4.fna&_nc_gid=vdG4P8p0DGO3eIxlFkzi5w&oh=00_AfKfywIHUnIVhE6MZ5xG_8r5mxiGH0rSGUE5Kal_kS5D1w&oe=6822FB63',
     },
 
