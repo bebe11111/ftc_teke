@@ -98,6 +98,7 @@ function generatecard(){
             }
             else if (player.type == 'u19' && player.gender == 'férfi')
             {
+                flex.removeChild(flex.children[2])
                 u19mn.append(card)
             }
             else{captain.append(card)}

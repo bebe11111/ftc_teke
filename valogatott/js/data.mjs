@@ -147,7 +147,6 @@ const players = [
 
     {
         name: 'Harcos Ágnes',
-        team: 'hun',
         gender: 'nő',
         type: 'hun',
         best: '592',
@@ -156,7 +155,6 @@ const players = [
 
     {
         name: 'Farkas Imre',
-        team: 'hun',
         gender: 'férfi',
         type: 'hun',
         best: '592',
@@ -165,7 +163,6 @@ const players = [
 
     {
         name: 'Tróbert József',
-        team: 'hun',
         gender: 'férfi',
         type: 'hun',
         best: '592',
