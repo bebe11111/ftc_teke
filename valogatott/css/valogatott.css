@@ -1,7 +1,12 @@
 :root{
     --dark-grey: #141414;
-    --dark-greeen: radial-gradient(rgb(0, 36, 0), black);
-    --ftc-green : radial-gradient(rgb(0, 60, 0), black);
+    --bcg: radial-gradient(
+    circle at center,
+    #1a0000 0%,  /* sötétpiros */
+    #1a1a1a 40%, /* szürkésfehér */
+    #001a00 80%  /* sötétzöld */
+  );
+    --light-grey: #686868;
 }
 
 * {
@@ -11,6 +16,10 @@
 
 html{
     scroll-behavior: smooth;
+}
+
+body{
+    color: #a9a9a9;
 }
 
 header{
@@ -60,9 +69,7 @@ nav {
 main {
     padding: 1rem 0.5rem;
     margin-inline: auto;
-    width: 95%;
-    max-width: 1200px;
-    background-color: var(--ftc-green);
+    background: var(--bcg);
 
     p{
         text-indent: 1.8rem;
@@ -84,6 +91,7 @@ h1{
     text-decoration: var(--green) wavy underline;
     font-size: 1.8rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -196,7 +204,7 @@ input, form > button {
 footer{
     text-align: center;
     padding: 1.2rem;
-    background-color: var(--ftc-green);
+    background-color: var(--dark-grey);
     font-size: 1.1rem;
 }
 
