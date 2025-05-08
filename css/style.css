@@ -115,8 +115,10 @@ h4{
     display: grid;
 }
 
-.grid-div{
-    display: grid;
+.flex-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     /*grid: auto-flow dense 1fr 1fr 1fr;  utolsó card középre 
     justify-items: center;*/
@@ -218,8 +220,8 @@ footer{
     nav img {
         display: none;
     }
-    .grid-div{
-        grid-template-columns: 1fr 1fr;
+    .flex-div{
+        flex: 0 0 calc(50% - 1rem); /* 2 elem egy sorban (mínusz gap) */
     }
     #update-dialog{
         font-size: 1rem;
@@ -233,8 +235,8 @@ footer{
     nav img {
         display: none;
     }
-    .grid-div{
-        grid-template-columns: 1fr 1fr 1fr;
+    .flex-div{
+        flex: 0 0 calc(33.333% - 1rem); /* 3 elem egy sorban (mínusz gap) */    
     }
 }
 
@@ -251,7 +253,7 @@ footer{
     nav img {
         display: none;
     }
-    .grid-div{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    .flex-div{
+        flex: 0 0 calc(25% - 1rem); /* 4 elem egy sorban (mínusz gap) */    
     }
 }
