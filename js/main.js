@@ -82,7 +82,7 @@ function generateDelButton(idx) {
 function generateEditButton(idx) {
     const button = document.createElement('button');
     const div = document.createElement('div')
-    button.textContent = "Edit"
+    button.textContent = "Szerkesztés"
     button.classList.add('bg-yellow-500', 'p-2', 'rounded', 'cursor-pointer');
     button.addEventListener('click', () => {
         updatePlayer = idx;
