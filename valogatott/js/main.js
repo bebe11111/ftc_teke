@@ -161,9 +161,9 @@ document.querySelector('#create').addEventListener('submit', event =>{
 
     const name = document.querySelector('#name').value;
     const team = document.querySelector('#team').value
-    const best = document.querySelector('#best').value;
     const gender = document.querySelector('#gender').value;
     const type  = document.querySelector('#type').value;
+    const best = document.querySelector('#best').value;
     const img = document.querySelector('#img').value;
 
     players.push({
@@ -185,10 +185,10 @@ document.querySelector('#update').addEventListener('submit', (event) => {
 
     const name = document.querySelector('#update-name').value;
     const team = document.querySelector('#update-team').value
-    const best = document.querySelector('#update-best').value;
     const gender = document.querySelector('#update-gender').value;
     const type  = document.querySelector('#update-type').value;
-    const img = document.querySelector('#-update-img').value;
+    const best = document.querySelector('#update-best').value;
+    const img = document.querySelector('#update-img').value;
 
     players.splice(updatePlayer, 1, {
         name,
