@@ -17,7 +17,7 @@ const players = [
 
     {
         name: 'Fábián Adelin',
-        best: '605',
+        best: '609',
         gender: 'nő',
         img: 'https://www.fradi.hu/wm/upload/295x393/u/01/1vbia.jpg',
     },
