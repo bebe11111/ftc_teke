@@ -147,7 +147,7 @@ const players = [
     {
         name: 'Harcos Ágnes',
         team: 'hun',
-        gender: 'Nő',
+        gender: 'nő',
         type: 'hun',
         best: '592',
         img: 'https://www.fradi.hu/wm/upload/295x393/9/f3/c65q0.jpg',

@@ -53,13 +53,7 @@ function generatecard(){
     u19mn.append(u19mnh4)
     captain.append(captainh4)
 
-
     div.replaceChildren()
-    u15wmn.replaceChildren()
-    u19wmn.replaceChildren()
-    u15mn.replaceChildren()
-    u19wmn.replaceChildren()
-    captain.replaceChildren()
 
     for(const [index, player] of players.entries())
         {
@@ -85,18 +79,18 @@ function generatecard(){
         
             card.append(image, flex)
 
-            if (player.type == 'u15' && player.gender == 'Nő') {
+            if (player.type == 'u15' && player.gender == 'nő') {
                 u15wmn.append(card)
             }
-            else if (player.type == 'u19' && player.gender == 'Nő')
+            else if (player.type == 'u19' && player.gender == 'nő')
             {
                 u19wmn.append(card)
             }
-            else if (player.type == 'u19' && player.gender == 'Nő')
+            else if (player.type == 'u19' && player.gender == 'férfi')
             {
                 u15mn.append(card)
             }
-            else if (player.type == 'u19' && player.gender == 'Nő')
+            else if (player.type == 'u19' && player.gender == 'férfi')
             {
                 u19wmn.append(card)
             }
