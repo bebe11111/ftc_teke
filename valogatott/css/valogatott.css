@@ -7,6 +7,7 @@
     #001a00 80%  /* sötétzöld */
   );
     --light-grey: #686868;
+    --main-bcg: radial-gradient(circle at center, rgb(15,0,0) 0%, #1a1a1a 40%, rgb(0,10,0) 100%);
 }
 
 * {
@@ -20,6 +21,7 @@ html{
 
 body{
     color: #a9a9a9;
+    background: var(--main-bcg);
 }
 
 header{
@@ -190,6 +192,12 @@ form {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+
+    input, option, select{
+        color: black;
+        background-color: white;
+    }
+
 }
 
 input, form > button {
@@ -246,7 +254,7 @@ footer{
 
 @media screen and (min-width: 1400px) {
     main{
-        max-width: 1600px;
+        max-width: 1700px;
     }
     p{
         font-size: large;

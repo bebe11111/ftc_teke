@@ -155,14 +155,18 @@ document.querySelector('#create').addEventListener('submit', event =>{
     event.preventDefault()
 
     const name = document.querySelector('#name').value;
+    const team = document.querySelector('#team').value
     const best = document.querySelector('#best').value;
     const gender = document.querySelector('#gender').value;
+    const type  = document.querySelector('#type').value;
     const img = document.querySelector('#img').value;
 
     players.push({
         name,
-        best,
+        team,
         gender,
+        type,
+        best,
         img,
     });
 
@@ -175,14 +179,18 @@ document.querySelector('#update').addEventListener('submit', (event) => {
     event.preventDefault();
 
     const name = document.querySelector('#update-name').value;
+    const team = document.querySelector('#update-team').value
     const best = document.querySelector('#update-best').value;
     const gender = document.querySelector('#update-gender').value;
-    const img = document.querySelector('#update-img').value;
+    const type  = document.querySelector('#update-type').value;
+    const img = document.querySelector('#-update-img').value;
 
     players.splice(updatePlayer, 1, {
         name,
-        best,
+        team,
         gender,
+        type,
+        best,
         img,
     })
 
