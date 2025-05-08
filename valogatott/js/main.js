@@ -41,6 +41,12 @@ function generatecard(){
     u19mnh4.textContent = 'U19 FIÚK';
     captainh4.textContent ='SZÖVETSÉGI KAPITÁNYOK';
 
+    u15wmnh4.classList.add('basis-full')
+    u19wmnh4.classList.add('basis-full','mt-[3rem]')
+    u15mnh4.classList.add('basis-full','mt-[3rem]')
+    u19mnh4.classList.add('basis-full','mt-[3rem]')
+    captainh4.classList.add('basis-full','mt-[3rem]')
+
     u15wmn.classList.add('flex-div',)
     u19wmn.classList.add('flex-div',)
     u15mn.classList.add('flex-div',)
@@ -72,7 +78,7 @@ function generatecard(){
 
             )
         
-            card.classList.add('card','text-black')
+            card.classList.add('card','text-black',)
         
             image.src = player.img
             image.alt = image.tittle = player.name
@@ -86,13 +92,13 @@ function generatecard(){
             {
                 u19wmn.append(card)
             }
-            else if (player.type == 'u19' && player.gender == 'férfi')
+            else if (player.type == 'u15' && player.gender == 'férfi')
             {
                 u15mn.append(card)
             }
             else if (player.type == 'u19' && player.gender == 'férfi')
             {
-                u19wmn.append(card)
+                u19mn.append(card)
             }
             else{captain.append(card)}
             
