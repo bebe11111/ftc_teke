@@ -75,18 +75,22 @@ function generatecard(){
             card.append(image, grid)
 
             if (player.type == 'u15' && player.gender == 'nő') {
+                u15wmn.classList.add('u15', 'nő')
                 u15wmn.append(card)
             }
             else if (player.type == 'u19' && player.gender == 'nő')
             {
+                u19wmn.classList.add('u19', 'nő')
                 u19wmn.append(card)
             }
             else if (player.type == 'u15' && player.gender == 'férfi')
             {
+                u15mn.classList.add('u15', 'férfi')
                 u15mn.append(card)
             }
             else if (player.type == 'u19' && player.gender == 'férfi')
             {
+                u19mn.classList.add('u19', 'férfi')
                 u19mn.append(card)
             }
             else{
@@ -147,10 +151,7 @@ function generateEditButton(idx) {
 document.querySelector('#create').addEventListener('submit', event =>{
     event.preventDefault()
 
-        if (true) {
-            
         
-        }
 
     const name = document.querySelector('#name').value;
     const team = document.querySelector('#team').value
@@ -158,6 +159,13 @@ document.querySelector('#create').addEventListener('submit', event =>{
     const gender = document.querySelector('#gender').value;
     const type  = document.querySelector('#type').value;
     const img = document.querySelector('#img').value;
+
+    let typeContainer ; 
+
+    if (document.querySelector(`.${type}.${gender}`).children.length >= (type == 'u15' ? 3:7)) {
+        alert('rossz')
+        return
+    }
 
     players.push({
         name,

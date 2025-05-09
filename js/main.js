@@ -45,7 +45,10 @@ function generatecard(){
             div.classList.add('flex-div')
             image.classList.add('h-[460px]','overflow-hidden','object-cover')
         
-            image.src = player.img
+            if (player.img == '') {
+                image.src = '../valogatott/img/anonymus.webp'
+            }
+            else image.src = player.img
             image.alt = image.tittle = player.name
         
             card.append(image, grid)
