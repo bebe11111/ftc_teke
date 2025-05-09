@@ -166,8 +166,8 @@ document.querySelector('#create').addEventListener('submit', event =>{
 
     if (document.querySelector(`.${type}.${gender}`).children.length >= (type == 'u15' ? 3:7)) {
         
-        const close = document.querySelector('close_btn')
-        close.
+        const close = document.querySelector('close-btn')
+        closeBtn.showModal();
         return
     }
 
