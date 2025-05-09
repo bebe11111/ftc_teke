@@ -149,7 +149,7 @@ const players = [
         name: 'Harcos Ágnes',
         gender: 'nő',
         team: 'Szövetségi kapitány',
-        type: 'hun',
+        type: 'HUN',
         img: 'https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-6/480975639_2409739739380028_8013088948715270987_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=_mpdCAKFxtkQ7kNvwHFC3UJ&_nc_oc=AdlIYAHmBBaMQ3d6oSAPRYkBVbAUyI3e2FW1Ufz7ocBZsKpMWIjsBNxmaTFocO1tm4LxrOHLs34JnCirEu2P44mk&_nc_zt=23&_nc_ht=scontent.fbud7-4.fna&_nc_gid=EGUE0N4ijdkLqAjAOBhp5A&oh=00_AfK88eiv-o9nAJmstSwxVthAe0mjRr3nfyOIezrXyz3iNw&oe=68230BD7',
     },
 
@@ -157,7 +157,7 @@ const players = [
         name: 'Farkas Imre',
         gender: 'férfi',
         team: 'Szövetségi kapitány',
-        type: 'hun',
+        type: 'HUN',
         img: 'https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-6/448682969_10219467698762418_5251711648321696547_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=wHMleDvfrUkQ7kNvwHv-ihy&_nc_oc=AdnfYkMOZKSXUb15JhQzctnO35Z8X3E80sbkU3eN67GE9xxKwZSwiLxLxBCchIKXOXZxh5W1cxCYV7Gkuvwf5075&_nc_zt=23&_nc_ht=scontent.fbud7-4.fna&_nc_gid=Fw3U6P4JBUhTwZC_Ph2cHQ&oh=00_AfIFqUpQHwLfvqbbzycOqcBbhfCSvHV6RPYRA2qkoOeEkw&oe=68230768',
     },
 
@@ -165,7 +165,7 @@ const players = [
         name: 'Tróbert József',
         gender: 'férfi',
         team: 'Szövetségi kapitány',
-        type: 'hun',
+        type: 'HUN',
         img: 'https://scontent.fbud7-3.fna.fbcdn.net/v/t39.30808-6/480890961_2409742042713131_2213869011628627616_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=HqJjxbJf1YAQ7kNvwHVhsEP&_nc_oc=Admcrl1eZkfZvYq9az7RRG09jIn9LlTUVfsXEFOaZVvNvTfgtPUI8AtYc1dylXG0LI7qBDL53U6YIaojK91a7eA5&_nc_zt=23&_nc_ht=scontent.fbud7-3.fna&_nc_gid=fct3hR_aXQum7Jhd45AOMA&oh=00_AfJ82JYD8rMBOKm8Ma5ON06vwrzVtjWmc_eeR3A1Gb1uMA&oe=68231A28',
     },
 

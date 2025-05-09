@@ -14,6 +14,8 @@ const updateDialog = document.querySelector('#update-dialog')
 
 const deleteDialog = document.querySelector('#delete-dialog')
 
+const closeBtn = document.querySelector('#close-dialog')
+
 function generateParagraph(text, tomb){
     const p = document.createElement('p')
     p.classList.add('flex','flex-col','justify-around','!indent-[0]','text-center',...tomb ?? '')
@@ -163,7 +165,9 @@ document.querySelector('#create').addEventListener('submit', event =>{
     let typeContainer ; 
 
     if (document.querySelector(`.${type}.${gender}`).children.length >= (type == 'u15' ? 3:7)) {
-        alert('rossz')
+        
+        const close = document.querySelector('close_btn')
+        close.
         return
     }
 
@@ -180,6 +184,29 @@ document.querySelector('#create').addEventListener('submit', event =>{
 
     event.target.reset();
 });
+
+function generateLi(text, tomb){
+    const li = document.createElement('li')
+    li.textContent = text
+    li.classList.add(...tomb ?? '')
+    return li;
+}
+
+function generateList() {
+    const errorlist = document.querySelector('#error-list')
+
+    for(const player of players)
+    {
+        errorlist.classList.add('grid','grid-cols-2','m-5','mx-auto','gap-1','text-center',)
+        
+        errorlist.append(
+        generateLi(player.type +" " + player.gender +" "+ player.name, ['last:col-span-full'])
+        )
+    }
+    
+}
+
+generateList()
 
 document.querySelector('#update').addEventListener('submit', (event) => {
 
@@ -227,5 +254,9 @@ document.querySelector('#delete').addEventListener('submit', (event) => {
 document.querySelector('#close-delete').addEventListener('click', () => {
     updatePlayer = -1;
     deleteDialog.close();
+});
+
+document.querySelector('#close-button').addEventListener('click', () => {
+    closeBtn.close();
 });
 

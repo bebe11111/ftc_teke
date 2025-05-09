@@ -73,11 +73,14 @@ main {
     margin-inline: auto;
     background: var(--bcg);
 
-    p{
-        text-indent: 1.8rem;
-        text-align: justify;
-        line-height: 1.7;
-        margin-bottom: 0.3rem;
+
+    #intro, #last, #wch2025{
+        p{
+            text-indent: 1.8rem;
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 0.3rem;
+        }
     }
 
 }
@@ -224,6 +227,7 @@ footer{
     padding: 2rem;
 }
 
+
 @media screen and (min-width: 700px) {
     nav{
         &.closed {
@@ -235,6 +239,9 @@ footer{
     }
     nav img {
         display: none;
+    }
+    #error-list{
+        font-size: 1.2rem;
     }
 }
 

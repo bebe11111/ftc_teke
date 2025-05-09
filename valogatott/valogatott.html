@@ -55,6 +55,19 @@
         </article>
         <article id="players">
 
+            <dialog id="close-dialog" class="w-4/5 max-w-[600px] p-2 border rounded shadow self-center-safe justify-self-center-safe bg-green-100">
+                <p class="text-center text-[1.4rem]">Nem jó, az U15-nél csak 2 válogatott, míg az U19-nél csak 6 válogatott lehet!</p>
+                    <ul id="error-list">
+                        
+                    </ul>
+
+                    <div class="text-center">
+                        <button type="button" id="close-button" 
+                    class="h-[3.6rem] w-[7.4rem] text-[1.4rem] bg-gray-600 text-white cursor-pointer p-2 rounded hover:scale-105 transition-all">Mégse</button>
+                    </div>
+                
+            </dialog>
+
             <dialog id="delete-dialog" class="w-4/5 max-w-[600px] p-2 border rounded shadow self-center-safe justify-self-center-safe bg-green-100">
                 <form class="flex flex-col gap-2" id="delete">
                     <p class="">Biztos szeretnéd törölni az adott játékost?</p>
