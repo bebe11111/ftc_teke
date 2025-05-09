@@ -67,7 +67,7 @@ function generatecard(){
             const image = document.createElement("img")
             const flex = document.createElement('div')
             
-            flex.classList.add('flex','flex-wrap','m-5','mx-auto','gap-1','justify-evenly',)
+            flex.classList.add('flex','flex-wrap','m-5','mx-auto','gap-1','justify-evenly','min-h-[150px]')
 
             flex.append(
                 generateParagraph(player.name),
@@ -103,10 +103,14 @@ function generatecard(){
             }
             else if (player.type == 'u19' && player.gender == 'férfi')
             {
-                flex.removeChild(flex.children[2])
                 u19mn.append(card)
             }
-            else{captain.append(card)}
+            else{
+                captain.append(card)
+                flex.removeChild(flex.children[2])
+                flex.children[1].classList.add('flex','flex-col','justify-around')
+                flex.children[2].classList.add('flex','flex-col','justify-around')
+            }
             
         }
 

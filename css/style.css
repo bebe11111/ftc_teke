@@ -21,6 +21,10 @@ header{
     filter: blur(5px);
 }
 
+span{
+    cursor: pointer;
+}
+
 nav {
     display: flex;
     flex-direction: column;
