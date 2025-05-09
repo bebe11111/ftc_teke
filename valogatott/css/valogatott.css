@@ -219,7 +219,12 @@ footer{
     padding: 2rem;
 }
 
-@media screen and (min-width: 600px) {
+#update-dialog, #delete-dialog{
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 700px) {
     nav{
         &.closed {
         max-height: 100px;
@@ -231,12 +236,6 @@ footer{
     nav img {
         display: none;
     }
-    .flex-div{
-        flex: 0 0 calc(50% - 1rem); /* 2 elem egy sorban (mínusz gap) */
-    }
-    #update-dialog{
-        font-size: 1rem;
-    }
 }
 
 @media screen and (min-width: 900px) {
@@ -245,9 +244,6 @@ footer{
     }
     nav img {
         display: none;
-    }
-    .flex-div{
-        flex: 0 0 calc(33.333% - 1rem); /* 3 elem egy sorban (mínusz gap) */    
     }
 }
 
@@ -264,9 +260,6 @@ footer{
     nav img {
         display: none;
     }
-    .flex-div{
-        flex: 0 0 calc(25% - 1rem); /* 4 elem egy sorban (mínusz gap) */    
-    }
 }
 
 @media screen and (min-width: 1700px) {
@@ -282,13 +275,4 @@ footer{
     nav img {
         display: none;
     }
-    .flex-div{
-        flex: 0 0 calc(20% - 1rem); /* 4 elem egy sorban (mínusz gap) */    
-    }
 }
-
-/* lehet e medi scrennel szabályozni a flexet?
-    vagy jobb ha a flex magának szabályozza?
-    honnan kéne levenni a dsiplay block-ot?
-    github mi ez a compare & pull request?
-*/
