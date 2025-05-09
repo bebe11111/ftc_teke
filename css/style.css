@@ -165,7 +165,6 @@ h4{
 
 .card img {
     width: 100%;
-    height: auto;
     display: block;
 }
 
@@ -204,12 +203,17 @@ footer{
     font-size: 1.1rem;
 }
 
-#update-dialog{
+#update-dialog, #delete-dialog{
     font-size: 1.2rem;
     padding: 2rem;
 }
 
 @media screen and (min-width: 600px) {
+    nav{
+        &.closed {
+        max-height: 100px;
+    }
+    }
     nav, nav ul {
         flex-direction: row;
     }

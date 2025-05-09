@@ -16,7 +16,7 @@ const deleteDialog = document.querySelector('#delete-dialog')
 
 function generateParagraph(text){
     const p = document.createElement('p')
-    p.classList.add('flex','flex-col','justify-around',) //nincsen középen a szöveg
+    p.classList.add('flex','flex-col','justify-around',)
     p.textContent = text
     return p
 }
@@ -42,6 +42,8 @@ function generatecard(){
             )
         
             card.classList.add('card')
+            div.classList.add('flex-div')
+            image.classList.add('h-[460px]','overflow-hidden','object-cover')
         
             image.src = player.img
             image.alt = image.tittle = player.name
@@ -67,14 +69,14 @@ function generateDelButton(idx) {
         const items = [];
         for (const key in players[idx]) {
             const li = document.createElement('li')
-            li.classList.add('border', 'border-green-800', 'rounded','m-3', 'min-h-[2rem]')
+            li.classList.add('border', 'border-green-800', 'rounded','m-3', 'min-h-[2rem]','overflow-hidden')
             li.textContent = players[idx][key];
             items.push(li);
         }
         deleteDialog.querySelector('ul').replaceChildren(...items);
         deleteDialog.showModal();
     });
-    div.classList.add('p-2')
+    div.classList.add('p-2','col-2')
     div.append(button)
     return div
 }
@@ -83,7 +85,7 @@ function generateEditButton(idx) {
     const button = document.createElement('button');
     const div = document.createElement('div')
     button.textContent = "Szerkesztés"
-    button.classList.add('bg-yellow-500', 'p-2', 'rounded', 'cursor-pointer');
+    button.classList.add('bg-yellow-500', 'p-2', 'rounded', 'cursor-pointer',);
     button.addEventListener('click', () => {
         updatePlayer = idx;
         for (const key in players[idx]) {
@@ -91,7 +93,7 @@ function generateEditButton(idx) {
         }
         updateDialog.showModal();
     });
-    div.classList.add('p-2')
+    div.classList.add('p-2','col-2')
     div.append(button)
     return div
 }

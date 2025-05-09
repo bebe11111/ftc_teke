@@ -14,50 +14,34 @@ const updateDialog = document.querySelector('#update-dialog')
 
 const deleteDialog = document.querySelector('#delete-dialog')
 
-function generateParagraph(text){
+function generateParagraph(text, tomb){
     const p = document.createElement('p')
-    p.classList.add('flex','flex-col','justify-around',) //nincsen középen a szöveg
+    p.classList.add('flex','flex-col','justify-around','!indent-[0]','text-center',...tomb ?? '')
     p.textContent = text
     return p
 }
 
+function generateDiv(h4){
+    const div = document.createElement('div');
+    div.append(h4)
+    div.classList.add('flex-div',)
+    return div;
+}
+
+function generateh4(text){
+    const h4 = document.createElement('h4');
+    h4.textContent = text
+    h4.classList.add('basis-full','mt-[3rem]',)
+    return h4;
+}
+
 function generatecard(){
     const div = document.querySelector('#cards');
-    const u15wmn = document.createElement('div');
-    const u19wmn = document.createElement('div');
-    const u15mn = document.createElement('div');
-    const u19mn = document.createElement('div');
-    const captain = document.createElement('div');
-
-    const u15wmnh4 = document.createElement('h4');
-    const u19wmnh4 = document.createElement('h4');
-    const u15mnh4 = document.createElement('h4');
-    const u19mnh4 = document.createElement('h4');
-    const captainh4 = document.createElement('h4');
-
-    u15wmnh4.textContent = 'U15 LÁNYOK';
-    u19wmnh4.textContent = 'U19 LÁNYOK';
-    u15mnh4.textContent = 'U15 FIÚK';
-    u19mnh4.textContent = 'U19 FIÚK';
-    captainh4.textContent ='SZÖVETSÉGI KAPITÁNYOK';
-
-    u15wmnh4.classList.add('basis-full')
-    u19wmnh4.classList.add('basis-full','mt-[3rem]')
-    u15mnh4.classList.add('basis-full','mt-[3rem]')
-    u19mnh4.classList.add('basis-full','mt-[3rem]')
-    captainh4.classList.add('basis-full','mt-[3rem]')
-
-    u15wmn.classList.add('flex-div',)
-    u19wmn.classList.add('flex-div',)
-    u15mn.classList.add('flex-div',)
-    u19mn.classList.add('flex-div',)
-    captain.classList.add('flex-div',)
-
-    u15wmn.append(u15wmnh4)
-    u19wmn.append(u19wmnh4)
-    u15mn.append(u15mnh4)
-    u19mn.append(u19mnh4)
-    captain.append(captainh4)
+    const u15wmn = generateDiv(generateh4('U15 LÁNYOK'))
+    const u19wmn = generateDiv(generateh4('U19 LÁNYOK'))
+    const u15mn = generateDiv(generateh4('U15 FIÚK'))
+    const u19mn = generateDiv(generateh4('U19 FIÚK'))
+    const captain = generateDiv(generateh4('SZÖVETSÉGI KAPITÁNYOK'))
 
     div.replaceChildren()
 
@@ -65,21 +49,21 @@ function generatecard(){
         {
             const card = document.createElement("div")
             const image = document.createElement("img")
-            const flex = document.createElement('div')
+            const grid = document.createElement('div')
             
-            flex.classList.add('flex','flex-wrap','m-5','mx-auto','gap-1','justify-evenly','min-h-[150px]')
+            grid.classList.add('grid','m-5','mx-auto','gap-1','grid-cols-2',)
 
-            flex.append(
+            grid.append(
                 generateParagraph(player.name),
                 generateEditButton(index),
                 generateParagraph("Legjobb eredmény: " +  player.best),
                 generateDelButton(index),
-                generateParagraph(player.team)
+                generateParagraph(player.team,['col-span-full'])
 
             )
         
-            card.classList.add('card','text-black',)
-            image.classList.add('max-h-[460px]','object-contain','overflow-hidden','object-cover')
+            card.classList.add('card','text-black','basis-md')
+            image.classList.add('h-[460px]','overflow-hidden','object-cover')
 
             if (player.img == '') {
                 image.src = 'img/anonymus.webp'
@@ -88,7 +72,7 @@ function generatecard(){
             
             image.alt = image.tittle = player.name
         
-            card.append(image, flex)
+            card.append(image, grid)
 
             if (player.type == 'u15' && player.gender == 'nő') {
                 u15wmn.append(card)
@@ -107,9 +91,9 @@ function generatecard(){
             }
             else{
                 captain.append(card)
-                flex.removeChild(flex.children[2])
-                flex.children[1].classList.add('flex','flex-col','justify-around')
-                flex.children[2].classList.add('flex','flex-col','justify-around')
+                grid.removeChild(grid.children[2])
+                grid.children[1].classList.add('flex','flex-col','justify-around')
+                grid.children[2].classList.add('flex','flex-col','justify-around')
             }
             
         }
@@ -131,14 +115,14 @@ function generateDelButton(idx) {
         const items = [];
         for (const key in players[idx]) {
             const li = document.createElement('li')
-            li.classList.add('border', 'border-green-800', 'rounded','m-3', 'min-h-[2rem]')
+            li.classList.add('border', 'border-green-800', 'rounded','m-3', 'min-h-[2rem]','overflow-hidden')
             li.textContent = players[idx][key];
             items.push(li);
         }
         deleteDialog.querySelector('ul').replaceChildren(...items);
         deleteDialog.showModal();
     });
-    div.classList.add('p-2')
+    div.classList.add('p-2','col-2')
     div.append(button)
     return div
 }
@@ -147,7 +131,7 @@ function generateEditButton(idx) {
     const button = document.createElement('button');
     const div = document.createElement('div')
     button.textContent = "Szerkesztés"
-    button.classList.add('bg-yellow-500', 'p-2', 'rounded', 'cursor-pointer');
+    button.classList.add('bg-yellow-500', 'p-2', 'rounded', 'cursor-pointer',);
     button.addEventListener('click', () => {
         updatePlayer = idx;
         for (const key in players[idx]) {
@@ -155,13 +139,18 @@ function generateEditButton(idx) {
         }
         updateDialog.showModal();
     });
-    div.classList.add('p-2')
+    div.classList.add('p-2','col-2')
     div.append(button)
     return div
 }
 
 document.querySelector('#create').addEventListener('submit', event =>{
     event.preventDefault()
+
+        if (true) {
+            
+        
+        }
 
     const name = document.querySelector('#name').value;
     const team = document.querySelector('#team').value
@@ -185,6 +174,7 @@ document.querySelector('#create').addEventListener('submit', event =>{
 });
 
 document.querySelector('#update').addEventListener('submit', (event) => {
+
     event.preventDefault();
 
     const name = document.querySelector('#update-name').value;
@@ -230,3 +220,4 @@ document.querySelector('#close-delete').addEventListener('click', () => {
     updatePlayer = -1;
     deleteDialog.close();
 });
+
