@@ -6,7 +6,7 @@ const players = [
         team: 'Ipartechnika Győr SE',
         gender: 'nő',
         type: 'u15',
-        best: '520',
+        best: '551',
         img: 'https://jakiskola.hu/wp-content/uploads/2023/09/Annamari-768x1024.jpg',
     },
 
