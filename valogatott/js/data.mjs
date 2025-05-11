@@ -51,7 +51,7 @@ const players = [
         team: 'Rákoshegyi VSE',
         gender: 'nő',
         type: 'u19',
-        best: '559',
+        best: '600',
         img: 'https://feltoltes.csaka9.hu/uploads/Danoczy_Kinga.jpeg',
     },
 
@@ -69,7 +69,7 @@ const players = [
         team: 'Pápai Vasas TK',
         gender: 'nő',
         type: 'u19',
-        best: '549',
+        best: '598',
         img: 'https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-6/489960721_122226953984020039_7428192294536384482_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Ll2fKTRMDu0Q7kNvwFMSTqp&_nc_oc=Adm8YRzYN4Elil93IKSDtZ6fLffijUuu-5LCLAShnxvEgBdyD2MAooYqsdslxaR9FIuixCtcifMzaEbc95LSzij4&_nc_zt=23&_nc_ht=scontent.fbud7-4.fna&_nc_gid=emX1kWOgUFmUG6vBqdzcaA&oh=00_AfJQX_D9_Seb648qOesdyAOBLQBlUpszbEqT3yBwLQfubw&oe=6822F856',
     },
 
