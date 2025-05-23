@@ -15,7 +15,7 @@ const players = [
         team: 'ZTE-ZÁÉV TK',
         gender: 'nő',
         type: 'u15',
-        best: '554',
+        best: '586',
         img: 'https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-6/494308029_122166285896546857_29413513973211694_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=tGCq8T4d9bcQ7kNvwFNvEDB&_nc_oc=Adn38oZuHWsKCe-Re0Yt7y7rbpeBzx0bQRXhNqpW9E6eCP_duzAumtoOlf7noOcKQnOg6Hjs1faSCZ4Bsg2RZ8hI&_nc_zt=23&_nc_ht=scontent.fbud7-4.fna&_nc_gid=_1u6Wb5v0E8jsGdYSIoD4A&oh=00_AfIcO3oaTkXg2Zp7Doesc0OjSadVnUnXmrwQgbbwdCpLBg&oe=6822F466',
     },
 
